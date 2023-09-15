@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     name = "tom"
-    age = 10
+    age = 19
     email = "tom.ipynb@gmail.com"
     return render_template(
         "card.html",
