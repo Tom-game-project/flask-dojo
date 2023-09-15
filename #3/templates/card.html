@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="{{url_for('static',filename='style.css')}}">
     <title>Tomのアプリ</title>
 </head>
 <body>
-    <div>{{name}}</div>
-    <div>{{age}}</div>
-    <div>{{email}}</div>
+
+    <h1>こんにちわ{{name}}さん</h1>
+    <!--userの年齢によって表示を切り替える-->
+    {% if age>=18 %}
+        <div>アダルト</div>
+    {% else %}
+        <div>アダルトコンテンツ制限</div>
+    {% endif %}
+        <div>{{email}}</div>
 </body>
 </html>
