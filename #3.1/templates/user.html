@@ -1,0 +1,11 @@
+{% extends 'layer.html' %}
+
+{% block alert %}
+    {% if age>=18 %}
+        {# 18歳以上であれば#}
+        <div>コンテンツを視聴可能です</div>
+    {% else %}
+        {# 18歳以上でなければ#}
+        <div>年齢制限のあるコンテンツです</div>
+    {% endif %}
+{% endblock %}
